@@ -14,6 +14,7 @@ public class Mision extends Batallon{
         this.id = id;
         this.fechaMision = fechaMision;
         this.ubicacion = ubicacion;
+        this.listaSoldados = new LinkedList<>();
     }
 
     public String getId() {

@@ -87,7 +87,7 @@ public class MisionTest {
 
         int promedio = mision.getPromedioEdadSoldados();
 
-        assertEquals(28, promedio);
+        assertEquals(27, promedio);
         LOG.info("...Finalizando prueba calcularEdadPromedio...");
 
     }
@@ -96,12 +96,13 @@ public class MisionTest {
     void testBuscarSoldadoPorId() {
         LOG.info("...Finalizando prueba BuscarSoldadoPorId...");
         Mision mision = new Mision("Patrullaje","A123",LocalDate.now(),"España");
-        mision.addPersonalAsignado(new Soldado("Ana", "S001", Rango.CABO, 32 , true, Especializacion.COMUNICACION));
+        mision.addPersonalAsignado(new Soldado("Ana", "S001", Rango.SARGENTO, 32 , true, Especializacion.COMUNICACION));
+        mision.addPersonalAsignado(new Soldado("Sofia", "S002", Rango.CABO, 23 , true, Especializacion.MEDICO));
 
         Soldado encontrado = mision.getSoldadoById("S001");
 
         assertNotNull(encontrado);
-        assertEquals("Marco", encontrado.getNombre());
+        assertEquals("Ana", encontrado.getNombre());
         LOG.info("...Finalizando prueba BuscarSoldadoPorId...");
     }
 }

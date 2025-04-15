@@ -18,6 +18,7 @@ public class Soldado extends Batallon {
         this.edad = edad;
         this.disponibilidad = disponibilidad;
         this.especializacion = especializacion;
+        this.listaMisiones = new LinkedList<>();
     }
 
     public void setIdentificador(String identificador){

@@ -9,7 +9,7 @@ public class Batallon {
 
     public Batallon(String nombre) {
         this.nombre = nombre;
-        listaVehiculos = new LinkedList<>();
+        this.listaVehiculos = new LinkedList<>();
 
     }
 
